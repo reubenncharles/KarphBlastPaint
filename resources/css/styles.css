@@ -123,6 +123,49 @@ img {
     text-align: center;
 }
 
+/* Breadcrumb Section */
+.breadcrumb-section {
+    background-color: var(--light-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin-left: 10px;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
@@ -366,7 +409,7 @@ img {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-    padding: 120px 0 0;
+    padding: 90px 0 0;
     background: var(--dark-color);
     position: relative;
 }
@@ -402,13 +445,18 @@ img {
     position: relative;
     height: 600px;
     overflow: hidden;
-    border-radius: 8px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+    border-radius: 1%;
+    margin-top: 0;
 }
 
 .hero-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 35px;
+    margin-top: 0;
 }
 
 .hero-slider {
@@ -741,6 +789,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .benefit-card {
@@ -901,6 +951,7 @@ img {
     align-items: center;
 }
 
+/* Author Image Container */
 .author-img {
     width: 60px;
     height: 60px;
@@ -908,6 +959,20 @@ img {
     overflow: hidden;
     margin-right: 15px;
     border: 3px solid var(--secondary-color);
+    position: relative;
+    flex-shrink: 0; /* Prevents shrinking in flex containers */
+    aspect-ratio: 1/1; /* Ensures perfect square */
+}
+
+/* Author Image */
+.author-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .author-info h4 {
@@ -983,17 +1048,20 @@ img {
     position: relative;
 }
 
-.about-image img {
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+/* Updated Experience Badge */
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 200px; /* Give it some height */
+    margin: 0 auto;
 }
 
 .experience-badge {
-    position: absolute;
-    bottom: -25px;
-    right: 30px;
-    width: 120px;
-    height: 120px;
+    position: relative; /* Changed from absolute */
+    width: 180px; /* Slightly larger */
+    height: 180px;
     background-color: var(--secondary-color);
     border-radius: 50%;
     display: flex;
@@ -1001,12 +1069,14 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--dark-color);
-    padding: 10px;
+    padding: 0px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto; /* Center it */
 }
 
 .experience-badge span {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Larger number */
     font-weight: 700;
     line-height: 1;
     margin-bottom: 5px;
@@ -1454,6 +1524,295 @@ textarea {
     transform: translateY(-5px);
 }
 
+/* ===== DROPDOWN MENU ===== */
+.has-dropdown {
+    position: relative; /* Essential for positioning context */
+}
+
+.has-dropdown > a {
+    position: relative;
+    padding-right: 40px !important;
+}
+
+/* Dropdown toggle button (mobile) */
+.dropdown-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--dark-color);
+}
+
+/* Main dropdown menu */
+.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    z-index: 1000;
+    padding: 10px 0;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Dropdown menu items */
+.has-dropdown .dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.has-dropdown .dropdown li a:hover {
+    background-color: rgba(37, 99, 160, 0.05);
+    color: var(--primary-color);
+    padding-left: 25px;
+}
+
+/* Hover state for desktop */
+@media (min-width: 993px) {
+    .has-dropdown:hover .dropdown {
+        display: block;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 992px) {
+    .dropdown-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
+    
+    .has-dropdown .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        animation: none;
+    }
+    
+    .has-dropdown.dropdown-active .dropdown {
+        display: block;
+    }
+    
+    .has-dropdown .dropdown li a {
+        padding: 12px 20px 12px 40px;
+        border-left: 3px solid transparent;
+    }
+    
+    .has-dropdown .dropdown li a:hover {
+        border-left-color: var(--secondary-color);
+    }
+}
+
+/* Animation for dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICES */
+
+/* Equipment Grid Layout */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Equipment Item Styling */
+.equipment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.equipment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Image Container Styling */
+.equipment-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px; /* Increased space between image and caption */
+    border-radius: 4px;
+    overflow: hidden; /* Ensures image stays in container */
+}
+
+/* Actual Image Styling */
+.equipment-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Content Styling */
+.equipment-content {
+    width: 100%;
+    position: relative;
+    margin-top: 10px; /* Additional spacing */
+}
+
+.equipment-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.equipment-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Media Section Styling */
+.media-section {
+    margin-top: 50px;
+}
+
+.media-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.section-padding-sm {
+    padding: 30px 0;
+}
+
+.media-section .equipment-item {
+    padding: 20px;
+}
+
+.media-section .equipment-content h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Responsive Layouts */
+/* Larger screens - 2 items per row */
+@media (min-width: 992px) {
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .equipment-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .equipment-image {
+        height: 300px;
+    }
+    
+    .equipment-image img {
+        height: 100%;
+        object-fit: contain; /* Ensures full image is visible */
+    }
+}
+
+/* Medium screens */
+@media (max-width: 991px) and (min-width: 768px) {
+    .equipment-image {
+        max-width: 400px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+    .equipment-item {
+        padding: 20px;
+    }
+    
+    .equipment-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* CASE STUDY IMAGES */
+
+.case-study-images {
+    width: auto;
+    text-align: center;
+    align-content: center;
+}
+
+.case-study-images img {
+    border-radius: 2%;
+    max-width: auto;
+    max-height: auto;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+}
+.case-study-item {
+    display: inline-block;
+}
+
+.case-study-grid {
+    display: inline-block;
+}
+
+.image-label {
+    font-weight: bold;
+    
+}
+
+
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 1200px) {
     .container {
@@ -1519,6 +1878,8 @@ textarea {
     .mobile-toggle {
         display: block;
     }
+
+
     
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1536,7 +1897,7 @@ textarea {
     }
     
     .about-image {
-        margin-top: 50px;
+        margin-top: 1px;
     }
     
     .areas-list {
@@ -1656,7 +2017,7 @@ textarea {
     }
     
     .section-padding {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     
     .hero-section h1 {
