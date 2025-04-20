@@ -12,7 +12,11 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="/resources/css/styles.css">
+    <link rel="stylesheet" href="/resources/css/styles.css">
+<link rel="stylesheet" href="/services/services-resources/services-css/services.css">
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="/resources/images/karph_logo-removebg-preview.png">
 </head>
 <body>
     <!-- Top Bar -->
@@ -25,7 +29,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
-                    <span><a href="mailto:karphblastpaint@gmail.com">karphblastpaint@gmail.com</a></span>
+                    <span>karphblastpaint@gmail.com</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
@@ -33,9 +37,9 @@
                 </div>
             </div>
             <div class="social-icons">
-                <a href="https://www.facebook.com/TMScoatings/photos"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:karphblastpaint@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:0411 566 514"><i class="fas fa-phone-alt"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
@@ -45,19 +49,31 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img width="100px" src="resources/images/karph_logo-removebg-preview.png" alt="Karph Blast and Paint Logo">
+                    <img width="100px" src="/resources/images/karph_logo-removebg-preview.png" alt="Karph Blast and Paint Logo">
                 </a>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+           <!-- Updated Navigation Menu with Services Dropdown -->
+           <nav class="main-nav">
+            <ul>
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/index.html#services" id="nav-services">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="/services/industrial-sandblasting.html">Industrial Sandblasting</a></li>
+                        <li><a href="/services/residential-sandblasting.html">Residential Sandblasting</a></li>
+                        <li><a href="/services/industrial-painting.html">Industrial Painting</a></li>
+                        <li><a href="/services/protective-coatings.html">Protective Coatings</a></li>
+                        <li><a href="/services/rust-removal.html">Rust Removal & Treatment</a></li>
+                        <li><a href="/services/mobile-services.html">Mobile Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="/index.html#projects" id="nav-projects">Projects</a></li>
+                <li><a href="/index.html#process" id="nav-process">Our Process</a></li>
+                <li><a href="/index.html#about" id="nav-about">About Us</a></li>
+                <li><a href="/locations.html" id="nav-locations">Service Areas</a></li>
+                <li><a href="/index.html#contact" id="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
             <div class="header-cta">
                 <a href="#quote" class="quote-btn">Get a Free Quote</a>
             </div>
@@ -83,7 +99,7 @@
                 </div>
                 <div class="hero-video">
                     <video autoplay muted loop playsinline>
-                        <source src="resources/images/karphpoolvid.mp4" type="video/mp4">
+                        <source src="/resources/images/karphpoolvid.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -135,93 +151,87 @@
     
     <!-- Services Section -->
     <section id="services" class="services-section section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">What We Do</span>
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-description">Comprehensive sandblasting and painting solutions for all your needs</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/sandblaster stock.jpg" alt="Industrial Sandblasting">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h3>Industrial Sandblasting</h3>
-                        <p>Efficient removal of rust, paint, and contaminants from industrial equipment and structures.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/residential sandblasting stock.jpg" alt="Residential Sandblasting">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Residential Sandblasting</h3>
-                        <p>Restore and prepare surfaces around your home including brick, concrete, and metal features.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/industrial painting stock.jpg" alt="Industrial Painting">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-roller"></i>
-                        </div>
-                        <h3>Industrial Painting</h3>
-                        <p>High-quality, durable paint applications for industrial facilities and equipment.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/industrial coating stock.webp" alt="Protective Coatings">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Protective Coatings</h3>
-                        <p>Specialized coatings to protect surfaces from corrosion, chemicals, and weathering.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/industrial rust removal stock.jpg" alt="Rust Removal">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-brush"></i>
-                        </div>
-                        <h3>Rust Removal & Treatment</h3>
-                        <p>Effective rust elimination and preventative treatments for long-lasting protection.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="resources/images/mobile sandblaster.jpeg" alt="Mobile Services">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Mobile Services</h3>
-                        <p>On-site solutions with our fully-equipped mobile units bringing our services to your location.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+       <!-- Updated Service Cards with Proper Links -->
+<div class="services-grid">
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/sandblaster stock.jpg" alt="Industrial Sandblasting">
         </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-industry"></i>
+            </div>
+            <h3>Industrial Sandblasting</h3>
+            <p>Efficient removal of rust, paint, and contaminants from industrial equipment and structures.</p>
+            <a href="/services/industrial-sandblasting.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/residential sandblasting stock.jpg" alt="Residential Sandblasting">
+        </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <h3>Residential Sandblasting</h3>
+            <p>Restore and prepare surfaces around your home including brick, concrete, and metal features.</p>
+            <a href="/services/residential-sandblasting.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/industrial painting stock.jpg" alt="Industrial Painting">
+        </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-paint-roller"></i>
+            </div>
+            <h3>Industrial Painting</h3>
+            <p>High-quality, durable paint applications for industrial facilities and equipment.</p>
+            <a href="/services/industrial-painting.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/industrial coating stock.jpg" alt="Protective Coatings">
+        </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Protective Coatings</h3>
+            <p>Specialized coatings to protect surfaces from corrosion, chemicals, and weathering.</p>
+            <a href="/services/protective-coatings.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/industrial rust removal stock.jpg" alt="Rust Removal">
+        </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-brush"></i>
+            </div>
+            <h3>Rust Removal & Treatment</h3>
+            <p>Effective rust elimination and preventative treatments for long-lasting protection.</p>
+            <a href="/services/rust-removal.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-img">
+            <img src="/resources/images/mobile sandblaster.jpeg" alt="Mobile Services">
+        </div>
+        <div class="service-content">
+            <div class="service-icon">
+                <i class="fas fa-truck"></i>
+            </div>
+            <h3>Mobile Services</h3>
+            <p>On-site solutions with our fully-equipped mobile units bringing our services to your location.</p>
+            <a href="/services/mobile-services.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
     </section>
     
     <!-- CTA Section -->
@@ -268,7 +278,7 @@
                 </div>
                 <div class="project-item residential">
                     <div class="project-img">
-                        <img src="resources/images/house sandblasted.jpg" alt="Heritage Home Restoration">
+                        <img src="/resources/images/house sandblasted.jpg" alt="Heritage Home Restoration">
                         <div class="project-overlay">
                             <div class="project-category">Residential</div>
                             <div class="project-buttons">
@@ -284,7 +294,7 @@
                 </div>
                 <div class="project-item commercial">
                     <div class="project-img">
-                        <img src="resources/images/boat restoration.jpg" alt="Shopping Centre Refresh">
+                        <img src="/resources/images/boat restoration.jpg" alt="Shopping Centre Refresh">
                         <div class="project-overlay">
                             <div class="project-category">Commercial</div>
                             <div class="project-buttons">
@@ -300,7 +310,7 @@
                 </div>
                 <div class="project-item industrial">
                     <div class="project-img">
-                        <img src="resources/images/factory eqt.jpg" alt="Factory Equipment Restoration">
+                        <img src="/resources/images/factory eqt.jpg" alt="Factory Equipment Restoration">
                         <div class="project-overlay">
                             <div class="project-category">Industrial</div>
                             <div class="project-buttons">
@@ -316,7 +326,7 @@
                 </div>
                 <div class="project-item residential">
                     <div class="project-img">
-                        <img src="resources/images/pool area restoration.jpg" alt="Pool Area Renovation">
+                        <img src="/resources/images/pool area restoration.jpg" alt="Pool Area Renovation">
                         <div class="project-overlay">
                             <div class="project-category">Residential</div>
                             <div class="project-buttons">
@@ -332,7 +342,7 @@
                 </div>
                 <div class="project-item commercial">
                     <div class="project-img">
-                        <img src="resources/images/car restoration.jpg" alt="Classic Car Restoration">
+                        <img src="/resources/images/car restoration.jpg" alt="Classic Car Restoration">
                         <div class="project-overlay">
                             <div class="project-category">Commercial</div>
                             <div class="project-buttons">
@@ -496,11 +506,11 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="/api/placeholder/80/80" alt="John Smith">
+                            <img src="/resources/images/testimonial-brett.jpg" alt="Brett">
                         </div>
                         <div class="author-info">
-                            <h4>John Smith</h4>
-                            <span>Operations Manager, Sydney Manufacturing</span>
+                            <h4>Brett W</h4>
+                            <span>Operations Manager, Sydney-Based Manufacturing Company</span>
                         </div>
                     </div>
                 </div>
@@ -517,7 +527,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="/api/placeholder/80/80" alt="Sarah Johnson">
+                            <img src="/resources/images/testimonial-sarah.jpg" alt="Sarah Johnson">
                         </div>
                         <div class="author-info">
                             <h4>Sarah Johnson</h4>
@@ -538,7 +548,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="/api/placeholder/80/80" alt="Michael Wong">
+                            <img src="/resources/images/testimonial-michael.jpg" alt="Michael Wong">
                         </div>
                         <div class="author-info">
                             <h4>Michael Wong</h4>
@@ -576,9 +586,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="/api/placeholder/500/600" alt="Karph Blast and Paint Team">
                     <div class="experience-badge">
-                        <span>8+</span>
+                        <span>11+</span>
                         Years of Experience
                     </div>
                 </div>
@@ -769,7 +778,7 @@
                             </div>
                             <div class="info-content">
                                 <h3>Phone</h3>
-                                <p><a href="tel:0411566514">0411 566 514</a></p>
+                                <p><a href="tel:0411556514">0411 556 514</a></p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -778,7 +787,7 @@
                             </div>
                             <div class="info-content">
                                 <h3>Email</h3>
-                                <p><a href="mailto:karphblastpaint@gmail.com">karphblastpaint@gmail.com</a></p>
+                                <p><a href="mailto:karphblastpaint2gmail.com">karphblastpaint@gmail.com</a></p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -795,16 +804,16 @@
                     <div class="contact-social">
                         <h3>Follow Us</h3>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/TMScoatings/photos"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:karphblastpaint@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:0411 566 514"><i class="fas fa-phone-alt"></i></a>
+                            <a href="https://www.facebook.com/TMScoatings/photos" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="contact-map">
                     <div class="map-container">
                         <!-- Map will be implemented later -->
-                        <img src="resources/images/map location.jpg" alt="Map location">
+                        <img src="/resources/images/map location.jpg" alt="Map location">
                     </div>
                 </div>
             </div>
@@ -896,13 +905,13 @@
                 <div class="footer-widgets">
                     <div class="footer-widget about-widget">
                         <div class="footer-logo">
-                            <img src="resources/images/karph logo charcol.png" alt="Karph Blast and Paint Logo">
+                            <img src="/resources/images/karph logo charcol.png" alt="Karph Blast and Paint Logo">
                         </div>
                         <p>Professional sandblasting and painting services for industrial and residential projects. Quality workmanship, competitive pricing, and customer satisfaction guaranteed.</p>
                         <div class="footer-social">
-                           <a href="https://www.facebook.com/TMScoatings/photos"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:karphblastpaint@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:0411 566 514"><i class="fas fa-phone-alt"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="footer-widget">
@@ -916,23 +925,24 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Our Services</h3>
-                        <ul class="footer-links">
-                            <li><a href="#">Industrial Sandblasting</a></li>
-                            <li><a href="#">Residential Sandblasting</a></li>
-                            <li><a href="#">Industrial Painting</a></li>
-                            <li><a href="#">Protective Coatings</a></li>
-                            <li><a href="#">Rust Removal & Treatment</a></li>
-                            <li><a href="#">Mobile Services</a></li>
-                        </ul>
-                    </div>
+                    <!-- Updated Footer Service Links -->
+<div class="footer-widget">
+    <h3 class="widget-title">Our Services</h3>
+    <ul class="footer-links">
+        <li><a href="/services/industrial-sandblasting.html">Industrial Sandblasting</a></li>
+        <li><a href="/services/residential-sandblasting.html">Residential Sandblasting</a></li>
+        <li><a href="/services/industrial-painting.html">Industrial Painting</a></li>
+        <li><a href="/services/protective-coatings.html">Protective Coatings</a></li>
+        <li><a href="/services/rust-removal.html">Rust Removal & Treatment</a></li>
+        <li><a href="/services/mobile-services.html">Mobile Services</a></li>
+    </ul>
+</div>
                     <div class="footer-widget">
                         <h3 class="widget-title">Contact Info</h3>
                         <ul class="footer-contact">
                             <li><i class="fas fa-map-marker-alt"></i> 123 Industrial Way, Schofields, NSW 2762</li>
                             <li><i class="fas fa-phone-alt"></i> <a href="tel:0411566514">0411 566 514</a></li>
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@karphblastandpaint.com.au">info@karphblastandpaint.com.au</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:karphblastpaint@gmail.com">karphblastpaint@gmail.com</a></li>
                             <li><i class="fas fa-clock"></i> Mon-Fri: 7am-5pm, Sat: 8am-2pm</li>
                         </ul>
                     </div>
@@ -957,6 +967,6 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- JavaScript -->
-    <script src="resources/js/script.js"></script>
+    <script src="/resources/js/script.js"></script>
 </body>
 </html>
