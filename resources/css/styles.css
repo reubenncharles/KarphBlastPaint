@@ -124,7 +124,7 @@ img {
 }
 
 .view-more-projects {
-    display:hidden;
+    display:none;
 }
 
 /* Breadcrumb Section */
