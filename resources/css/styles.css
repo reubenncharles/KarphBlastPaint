@@ -123,6 +123,10 @@ img {
     text-align: center;
 }
 
+.view-more-projects {
+    display:hidden;
+}
+
 /* Breadcrumb Section */
 .breadcrumb-section {
     background-color: var(--light-color);
